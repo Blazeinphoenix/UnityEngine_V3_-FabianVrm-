@@ -7,6 +7,6 @@ public class EnemyCon : MonoBehaviour
     public void TakeDamage(int amount)
     {
         print(transform.name + " HasAttacked " + amount + " Damage ");
-        print("Sucess");
+        print("Success");
     }
 }
