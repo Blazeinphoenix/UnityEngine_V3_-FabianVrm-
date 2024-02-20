@@ -8,17 +8,27 @@ public class Save : MonoBehaviour
 {
     public TMP_InputField inputText;
     
-    string tutorialText;
+    private string tutorialText;
 
-    void Start()
-    {
-        tutorialText = PlayerPrefs.GetString("tutorialTextKeyName");
-        inputText.text = tutorialText;
-    }
+  
 
     public void SaveThis()
     {
         tutorialText = inputText.text;
         PlayerPrefs.SetString("tutorialTextKeyName", tutorialText);
+    }
+
+    public void LoadThis()
+    {
+
+        inputText.text = PlayerPrefs.GetString("tutorialTextKeyName", "");
+
+    }
+
+    public void DeleteThis()
+    {
+        PlayerPrefs.DeleteAll();
+        inputText.text = "";
+
     }
 }
