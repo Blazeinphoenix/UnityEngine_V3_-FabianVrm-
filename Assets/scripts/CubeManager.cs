@@ -17,7 +17,7 @@ public class CubeManager : MonoBehaviour
         }
     }
 
-    private void StartLoops()
+    public void StartLoops()
     {
         ChangeColor();
     }
@@ -39,10 +39,10 @@ public class CubeManager : MonoBehaviour
             cube.transform.position += new Vector3(0, .5f, 0);
         }
 
-        ScaleCube();
+        StartCoroutine(ScaleCube());
     }
 
-    private void ScaleCube()
+    private IEnumerator ScaleCube()
     {
         while (toggle.isOn)
         {
@@ -50,6 +50,10 @@ public class CubeManager : MonoBehaviour
             {
                 cube.transform.localScale -= new Vector3(.01f, .01f, .01f);
             }
+            yield return new WaitForSeconds(.1f);
+
         }
+
+
     }
 }
