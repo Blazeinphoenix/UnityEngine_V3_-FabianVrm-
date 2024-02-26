@@ -7,7 +7,6 @@ public  class Enemy_NEW : MonoBehaviour
 
     static public Queue<GameObject> EnemyQueue = new Queue<GameObject>();
 
-    // Start is called before the first frame update
     void Start()
     {
 
@@ -15,7 +14,6 @@ public  class Enemy_NEW : MonoBehaviour
         print($"Momentane Enemys in der Scene: {EnemyQueue.Count}");
     }
 
-    // Update is called once per frame
 
     private void ColorChange()
     {
@@ -26,6 +24,5 @@ public  class Enemy_NEW : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     
 }

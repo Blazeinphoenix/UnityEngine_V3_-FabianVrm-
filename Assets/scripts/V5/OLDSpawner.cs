@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectSpawner : MonoBehaviour
+public class OLDSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyToSpawn;
+   /* [SerializeField] private GameObject enemyToSpawn;
     [SerializeField] private float spawnRange = 5f;
    
 
@@ -31,4 +31,5 @@ public class ObjectSpawner : MonoBehaviour
 
 
     }
+   */
 }

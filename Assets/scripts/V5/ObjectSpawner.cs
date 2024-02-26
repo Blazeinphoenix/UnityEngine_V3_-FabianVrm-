@@ -6,7 +6,20 @@ public class ObjectSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject enemyToSpawn;
     [SerializeField] private float spawnRange = 5f;
-   
+    [SerializeField] private int poolSize = 10;
+
+
+    private void Start()
+    {
+        /*Enemy_NEW.EnemyQueue.Enqueue(gameObject);
+        for (int i = 0; i < poolSize; i++)
+        {
+            enemyToSpawn = Instantiate(enemyToSpawn);
+            
+        }
+        */
+    }
+
 
     void Update()
     {
@@ -20,9 +33,16 @@ public class ObjectSpawner : MonoBehaviour
         {
             ColorChange();
         }
+        
 
     }
 
+
+    /*public GameObject GetPoolEnemys()
+    {
+        if(enemyToSpawn)
+    }
+    */
     private void ColorChange()
     {
         GameObject nextObj = Enemy_NEW.EnemyQueue.Dequeue();
